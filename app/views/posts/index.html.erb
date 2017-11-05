@@ -1,6 +1,7 @@
 <% @posts.each do |post|%>
 <ul>
-    <lh><%= post.title %></lh>
-    <li><%= post.content %></li>
+    <%= link_to post_path(post.id) do%>
+        <lh><%= post.title %></lh>
+    <%end%>
 </ul>
 <% end %>
